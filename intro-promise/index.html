@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES6 promises</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+    <script type="text/babel">
+    
+    const delay = seconds => {
+     return new Promise(resolve => {
+         setTimeout(resolve, seconds * 1000)
+     });
+    };
+
+    console.log('zero seconds');
+    delay(1).then(() => console.log('one second'));
+    delay(5).then(() => console.log('five seconds'));
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

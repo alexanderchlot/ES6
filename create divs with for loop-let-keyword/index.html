@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Divs with for loop</title>
+    <style>
+        section > div {
+            height: 100px;
+            width: 100px;
+            background-color: black;
+            margin: 3px;
+            float: left;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section></section>
+  
+        <script>
+            // for loop that create 26 divs
+            for(let i=0; i<26; i++){
+                //create the div with document.create element and pass in the name of the tag. 
+                var div = document.createElement('div');
+                //A click handler named div.onclick set equal to a function that alert each time an click on a image
+                div.onclick = function() {
+                    alert('You clicked on div' + i);
+                };
+                document.getElementsByTagName('section')[0].appendChild(div);
+            }
+        </script>
+</body>
+</html>
